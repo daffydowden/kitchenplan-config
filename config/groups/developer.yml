@@ -1,14 +1,11 @@
 recipes:
     global:
         - dotfiles::gitconfig
-        - applications::sass
+        #- applications::sass
         - applications::ssh_config
-#        - applications::macvim          # install xcode before trying to compile macvim
         - dotfiles::vim
-        - applications::composer
         - applications::postgresql
         - applications::mysql
-        - applications::php55
         - dotfiles::workspace
     mac_os_x:
         - applications::svgo
@@ -27,7 +24,6 @@ recipes:
         - osxdefaults::increase_window_resize_speed_for_cocoa_applications
         - osxdefaults::speed_up_mission_control_animations
         - osxdefaults::tap_to_click
-        - osxdefaults::do_not_show_dashboard_as_a_space
         - osxdefaults::prevent_time_machine_from_prompting_to_use_new_hard_drives_as_backup_volume
         - osxdefaults::finder_allow_text_selection_in_quick_look
         - osxdefaults::finder_display_full_path
@@ -45,9 +41,6 @@ attributes:
             - git
             - git-extras
             - wget
-            - pwgen
-            - xmlstarlet
-            - pv
             - htop-osx
             - git-flow
             - siege
@@ -55,15 +48,12 @@ attributes:
         cask_apps:
             - imageoptim
             - imagealpha
-            - phpstorm
             - sequel-pro
             - sourcetree
             - recordit
     nodejs:
         apps:
-            - phonegap
-            - cordova
-            - ionic
             - bower
             - grunt
             - grunt-cli
+            - gulp
